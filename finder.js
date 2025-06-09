@@ -75,14 +75,6 @@ const adventurousRecipes = [
         description: "Stuffed flatbread with spiced mashed potatoes, traditionally served with curd or pickle."
       },
       {
-        name: "Eggplant Parmesan",
-        ingredients: ["eggplant", "tomato sauce", "mozzarella cheese", "parmesan cheese", "breadcrumbs", "olive oil", "basil"],
-        cuisine: "Italian",
-        type: "Vegetarian",
-        image:"images/healthy_baked_eggplant_parmesan-1.jpg",
-        description: "Baked layers of breaded eggplant, tomato sauce, and melted cheese — a comforting Italian classic."
-      },
-      {
         name: "Palak Paneer",
         ingredients: ["spinach", "paneer", "onion", "garlic", "ginger", "tomato", "green chili", "spices", "cream"],
         cuisine: "Indian",
