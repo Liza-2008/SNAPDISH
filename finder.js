@@ -152,14 +152,6 @@ const recipes = [
         description: "A classic grilled cheese sandwich made with toasted bread and melted cheese."
     },
     {
-        name: "Pancakes",
-        ingredients: ["flour", "milk", "egg", "butter"],
-        cuisine: "American",
-        type: "Vegetarian",
-        image: "images/buttermilk-pancakes.jpg", // Replace with actual image URL
-        description: "Fluffy pancakes served with syrup and butter."
-    },
-    {
         name: "Chicken Curry",
         ingredients: ["chicken", "onion", "garlic", "tomato", "spices"],
         cuisine: "Indian",
