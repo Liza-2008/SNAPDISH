@@ -1,0 +1,486 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-image: url('https://static.toiimg.com/thumb/64029527.cms?width=1200&height=900');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(252, 240, 240, 0.893);
+    background-blend-mode: overlay;
+    color: #333;
+    line-height: 1.6;
+    opacity: 0; /* Start completely transparent */
+    transform: translateY(20px); /* Start slightly below its final position */
+    animation: fadeInRise 0.8s ease-out forwards; /* Apply the animation */
+}
+
+/* --- Define the keyframes for the animation --- */
+@keyframes fadeInRise {
+    to {
+        opacity: 1; /* Fade to fully visible */
+        transform: translateY(0); /* Move to its final position */
+    }
+    
+}
+
+/* Header Styles */
+.main-header {
+    background-color: #d32f2f;
+    color: #d7bebe;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-header h1 {
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
+    color: white;
+}
+
+.tagline {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.main-nav li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: rgba(245, 71, 71, 0.8);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Recipe Suggestions */
+.recipe-suggestions {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2em;
+    color: #d32f2f;
+    margin-bottom: 15px;
+}
+
+.filter-options {
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    margin: 0 5px;
+    background-color: white;
+    border: 1px solid #d32f2f;
+    color: #d32f2f;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.recipe-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-10px);
+}
+
+.recipe-card a {
+    display: block;
+    position: relative;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-overlay span {
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+}
+
+.card-overlay i {
+    margin-right: 5px;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.recipe-card h3 {
+    color: #d32f2f;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.rating {
+    color: #ffc107;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    color: #666;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+.recipe-card p {
+    color: #666;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.view-recipe-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #d32f2f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.view-recipe-btn:hover {
+    background-color: #c12727;
+}
+
+.view-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.view-more-btn {
+    padding: 12px 30px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.view-more-btn:hover {
+    background-color: #c12727;
+    transform: scale(1.05);
+}
+
+/* Newsletter */
+.newsletter {
+    background-color: rgba(211, 47, 47, 0.9);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.newsletter p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1em;
+}
+
+.newsletter-form button {
+    padding: 12px 25px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #222;
+}
+
+/* Footer */
+.main-footer {
+    background-color: #222;
+    color: white;
+    padding: 40px 20px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-logo h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #d32f2f;
+}
+
+.footer-logo p {
+    margin-bottom: 20px;
+}
+
+.links-column h4 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #d32f2f;
+}
+
+.links-column ul {
+    list-style: none;
+}
+
+.links-column li {
+    margin-bottom: 10px;
+}
+
+.links-column a {
+    color: #d7bebe;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.links-column a:hover {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #d32f2f;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* Buttons */
+.animated-button {
+    margin: 20px auto;
+    display: block;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #FF4B2B;
+    border: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.animated-button:hover {
+    background-color: #FF416C;
+    transform: scale(1.05);
+}
+
+.animated-button:active {
+    transform: scale(0.95);
+}
+
+#back-button {
+    padding: 10px 20px;
+    background-color: #d32f2f;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #c12727;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: #c12727;
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
+    
+    .main-nav li {
+        margin: 5px 0;
+    }
+    
+    .newsletter-form {
+        flex-direction: column;
+    }
+    
+    .newsletter-form input {
+        border-radius: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .newsletter-form button {
+        border-radius: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 {
+        font-size: 2em;
+    }
+    
+    .tagline {
+        font-size: 1em;
+    }
+    
+    .hero h2 {
+        font-size: 1.8em;
+    }
+    
+    .recipe-card {
+        width: 100%;
+    }
+}

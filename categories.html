@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Categories - SNAPDISH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <h1>SNAPDISH</h1>
+            <p class="tagline">Discover delicious and healthy recipes based on your preferences</p>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="finder.html">Recipe Finder</a></li>
+                    <li><a href="categories.html" class="active">Categories</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="categories-container">
+        <section class="categories-intro">
+            <h2>Explore Recipes by Category</h2>
+            <p>Browse our collection of recipes organized by cuisine type, dietary preferences, and cooking styles</p>
+        </section>
+
+        <section class="category-section">
+            <h3>Cuisine Types</h3>
+            <div class="category-grid">
+                <div class="category-card" onclick="filterByCuisine('Indian')">
+                    <img src="images/istockphoto-639389404-612x612.jpg" alt="Indian Cuisine">
+                    <div class="category-overlay">
+                        <h4>Indian</h4>
+                        <p>Spices, curries, and diverse regional flavors</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="filterByCuisine('Italian')">
+                    <img src="images/7a5c7f5ce63501ac816d332b103b7a41.jpg" alt="Italian Cuisine">
+                    <div class="category-overlay">
+                        <h4>Italian</h4>
+                        <p>Pasta, pizza, and Mediterranean flavors</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="filterByCuisine('American')">
+                    <img src="images/1191903_720.jpg" alt="American Cuisine">
+                    <div class="category-overlay">
+                        <h4>American</h4>
+                        <p>Classic comfort foods and modern fusion</p>
+                    </div>
+                </div>
+                
+                
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="category-section">
+            <h3>Meal Types</h3>
+                <div>
+                <div class="category-card" onclick="filterByMeal('Dessert')">
+                    <br> </br>
+                    <br> </br>
+                    <img src="images/3-ingredient-dessert-recipes.webp" alt="Dessert">
+                    <div class="category-overlay">
+                        <h4>Dessert</h4>
+                        <p>Sweet treats</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="filterByMeal('Snacks')">
+                    <br></br>
+                    <img src="images/428385332d6f1a5361566c701eaf52d5.jpg" alt="Snacks">
+                    <div class="category-overlay">
+                        <h4>Snacks</h4>
+                        <p>Quick bites</p>
+                    </div>
+                </div>
+                
+                <div class="category-card" onclick="filterByMeal('Drinks')">
+                    <br></br>
+                    <img src="images/images.jpeg" alt="Drinks">
+                    <div class="category-overlay">
+                        <h4>Drinks</h4>
+                        <p>Beverages and cocktails</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; <span class="current-year"></span> SNAPDISH. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="categories.js"></script>
+</body>
+</html>

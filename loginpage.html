@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapdish - Login/Signup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="loginpage.css">
+    <style>
+        /* Added Snapdish brand color as example */
+        :root {
+            --brand-color: #ff6b6b;
+        }
+        .submit-btn {
+            background-color: var(--brand-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="signUpForm">
+                <h1>Create Snapdish Account</h1>
+                <div class="logo">
+                    <i class="fas fa-camera-retro"></i> Snapdish
+                </div>
+                
+                <div class="social-container">
+                    <a href="#" class="social" aria-label="Facebook login">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social" aria-label="Google login">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social" aria-label="Apple login">
+                        <i class="fab fa-apple"></i>
+                    </a>
+                </div>
+                
+                <span>or use your email for registration</span>
+                
+                <input type="text" 
+                       placeholder="Name" 
+                       required 
+                       aria-label="Full name"
+                       autocomplete="name">
+                       
+                <input type="email" 
+                       placeholder="Email" 
+                       required 
+                       aria-label="Email address"
+                       autocomplete="email">
+                       
+                <input type="password" 
+                       placeholder="Password" 
+                       required 
+                       aria-label="Password"
+                       autocomplete="new-password"
+                       minlength="8">
+                       
+                <button type="submit" class="submit-btn">
+                    Join Snapdish
+                </button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form id="signInForm">
+                <h1>Welcome to Snapdish</h1>
+                <div class="logo">
+                    <i class="fas fa-camera-retro"></i> Snapdish
+                </div>
+                
+                <div class="social-container">
+                    <a href="#" class="social" aria-label="Facebook login">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social" aria-label="Google login">
+                        <i class="fab fa-google"></i>
+                    </a>
+                    <a href="#" class="social" aria-label="Apple login">
+                        <i class="fab fa-apple"></i>
+                    </a>
+                </div>
+                
+                <span>or use your Snapdish account</span>
+                
+                <input type="email" 
+                       placeholder="Email" 
+                       required 
+                       aria-label="Email address"
+                       autocomplete="email">
+                       
+                <input type="password" 
+                       placeholder="Password" 
+                       required 
+                       aria-label="Password"
+                       autocomplete="current-password">
+                       
+                <a href="#" class="forgot-password">Forgot your password?</a>
+                
+                <button type="submit" class="submit-btn">
+                    Sign In
+                </button>
+            </form>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back to Snapdish!</h1>
+                    <p>Share your food moments with us again</p>
+                    <button class="ghost" id="signIn" aria-label="Switch to sign in">
+                        Sign In
+                    </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>New to Snapdish?</h1>
+                    <p>Join our community of food enthusiasts</p>
+                    <button class="ghost" id="signUp" aria-label="Switch to sign up">
+                        Create Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="loginpage.js"></script>
+</body>
+</html>

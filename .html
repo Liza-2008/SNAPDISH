@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food-E Home Page</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+    <header>
+        <h1>Food-E Recipe Finder</h1>
+        <p>Discover delicious and healthy recipes based on your preferences</p>
+    </header>
+
+    <div class="search-section">
+        <input type="text" id="search-bar" placeholder="Search for a recipe...">
+        <button id="search-button">Search</button>
+    </div>
+
+    <section class="filter-section">
+        <h2>Filter Recipes</h2>
+
+        <div class="filter-category">
+            <label for="cuisine">Cuisine Type:</label>
+            <select name="cuisine" id="cuisine">
+                <option value="all">All</option>
+                <option value="indian">Indian</option>
+                <option value="continental">Continental</option>
+                <option value="thai">Thai</option>
+                <option value="chinese">Chinese</option>
+            </select>
+        </div>
+
+        <div class="filter-category">
+            <label for="food_habit">Food Habit:</label>
+            <select name="food_habit" id="food_habit">
+                <option value="all">All</option>
+                <option value="veg">Vegetarian</option>
+                <option value="non-veg">Non-Vegetarian</option>
+            </select>
+        </div>
+
+        <button id="filter-button">Filter Recipes</button>
+    </section>
+
+    <section class="recipe-suggestions">
+        <h2>Suggested Recipes</h2>
+        <div class="recipe-grid">
+            <div class="recipe-card">
+                <a href="chole-bhature.html">
+                    <img src="https://www.mygingergarlickitchen.com/wp-content/rich-markup-images/16x9/16x9-punjabi-chole-bhature-chana-bhatura.jpg" alt="Chana Bhatura">
+                </a>
+                <h3>Chole Bhature</h3>
+                <p>Chole bhature is a food dish popular in the northern areas of the Indian subcontinent. It is a combination of chana masala and bhatura/puri, a deep-fried bread made from maida. Chole bhature is often eaten as a breakfast dish, sometimes accompanied with lassi.</p>
+            </div>
+
+            <div class="recipe-card">
+                <a href="chicken.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFwnU4kb_JftvOSgQctutBk396LZ6nzphx-w&s" alt="Butter chicken and naan">
+                </a>
+                <h3>Butter Chicken with Garlic Naan</h3>
+                <p>Garlic Naan with Butter Chicken is a popular Indian dish. Soft, buttery naan flavored with garlic pairs perfectly with the creamy, mildly spiced butter chicken, made from marinated chicken in a rich tomato and cream sauce.</p>
+            </div>
+
+            <div class="recipe-card">
+                <a href="sushi.html">
+                    <img src="https://www.kikkoman.eu/fileadmin/_processed_/a/c/csm_941-recipe-page-vegetarian-maki-sushi-three-ways_desktop_9bd3c76c63.jpg" alt="Sushi">
+                </a>
+                <h3>Sushi</h3>
+                <p>Sushi is a Japanese dish made of vinegared rice paired with seafood, vegetables, or fruit. It comes in forms like nigiri (rice with fish), maki (rice and fillings rolled in seaweed), and sashimi (sliced raw fish).</p>
+            </div>
+        </div>
+    </section>
+
+    <button id="enter-ingredients-button" class="animated-button" onclick="window.location.href='finder.html';">Enter Ingredients</button>
+
+    <button id="back-button" style="margin: 20px auto; display: block;">Back</button>
+
+    <footer>
+        <p>Powered by SNAPDISH © 2025 | Find your perfect recipe today according to your perfect mood!</p>
+    </footer>
+
+    <script src="homepage.js"></script>
+</body>
+</html>
