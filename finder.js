@@ -408,14 +408,6 @@ const recipes = [
       description: "A fiery and aromatic South Indian chicken curry made with freshly ground spices and roasted coconut, known for its bold flavor and rich texture."
     },
     {
-      name: "Egg Curry",
-      ingredients: ["boiled eggs", "onion", "tomato", "ginger", "garlic", "spices", "coriander", "oil"],
-      cuisine: "Indian",
-      type: "Non-Vegetarian",
-      image: "images/Egg Curry.jpg",
-      description: "A flavorful curry made with hard-boiled eggs simmered in a rich, spiced onion-tomato gravy — perfect with rice or chapati."
-    },
-    {
       name: "Mutton Keema Pav",
       ingredients: ["minced mutton", "onion", "tomato", "ginger", "garlic", "green peas", "spices", "butter", "pav buns"],
       cuisine: "Indian",
