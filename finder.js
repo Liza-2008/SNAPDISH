@@ -375,54 +375,6 @@ const recipes = [
        image: "images/Basil-Pesto-Thumbnail-500x500.jpg",
        description: "A simple, aromatic pasta dish tossed in fresh basil pesto and topped with parmesan and pine nuts."
      },
-     {
-       name: "Masala Dosa",
-       ingredients: ["dosa batter", "potatoes", "onion", "mustard seeds", "curry leaves"],
-       cuisine: "Indian",
-       type: "Vegetarian",
-       image: "images/masala-dosa-recipe.jpg",
-       description: "Crispy fermented rice crepe filled with spicy mashed potatoes, served with chutney and sambar."
-     },
-     {
-       name: "Vegetable Biryani",
-       ingredients: ["basmati rice", "mixed vegetables", "spices", "yogurt", "saffron"],
-       cuisine: "Indian",
-       type: "Vegetarian",
-       image: "images/Vegetable-Biryani-Instant-Pot-Piping-Pot-Curry-4.jpg",
-       description: "A fragrant rice dish layered with spiced vegetables and cooked with saffron and herbs."
-     },
-     {
-       name: "Aloo Paratha",
-       ingredients: ["whole wheat flour", "potatoes", "spices", "ghee", "coriander"],
-       cuisine: "Indian",
-       type: "Vegetarian",
-       image: "images/Aloo-Paratha-4.jpg",
-       description: "Stuffed flatbread with spiced mashed potatoes, traditionally served with curd or pickle."
-     },
-     {
-       name: "Eggplant Parmesan",
-       ingredients: ["eggplant", "tomato sauce", "mozzarella cheese", "parmesan cheese", "breadcrumbs", "olive oil", "basil"],
-       cuisine: "Italian",
-       type: "Vegetarian",
-       image: "images/healthy_baked_eggplant_parmesan-1.jpg",
-       description: "Baked layers of breaded eggplant, tomato sauce, and melted cheese — a comforting Italian classic."
-     },
-     {
-       name: "Vegetable Lasagna",
-       ingredients: ["lasagna noodles", "zucchini", "spinach", "ricotta", "tomato sauce", "mozzarella", "parmesan"],
-       cuisine: "Italian",
-       type: "Vegetarian",
-       image: "images/Easy-Vegetable-Lasagna-Recipe-1200.jpg",
-       description: "Layered pasta with vegetables, creamy ricotta, tomato sauce, and melted cheese, baked to perfection."
-     },
-    {
-      name: "Palak Paneer",
-      ingredients: ["spinach", "paneer", "onion", "garlic", "ginger", "tomato", "green chili", "spices", "cream"],
-      cuisine: "Indian",
-      type: "Vegetarian",
-      image: "images/Palak Paneer.jpg",
-      description: "A creamy spinach-based curry cooked with soft paneer cubes and aromatic spices, served hot with naan or rice."
-    },
     {
       name: "Panzanella",
       ingredients: ["stale bread", "cherry tomatoes", "cucumber", "red onion", "basil", "olive oil", "red wine vinegar", "salt", "pepper"],
