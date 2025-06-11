@@ -416,14 +416,6 @@ const recipes = [
       description: "A flavorful curry made with hard-boiled eggs simmered in a rich, spiced onion-tomato gravy — perfect with rice or chapati."
     },
     {
-      name: "Chicken Piccata",
-      ingredients: ["chicken breasts", "lemon juice", "capers", "garlic", "butter", "white wine", "flour", "parsley"],
-      cuisine: "Italian",
-      type: "Non-Vegetarian",
-      image: "images/Chicken Piccata.jpg",
-      description: "Tender chicken breasts lightly floured and sautéed in a tangy lemon-butter sauce with capers — a quick and elegant Italian dish."
-    },
-    {
       name: "Mutton Keema Pav",
       ingredients: ["minced mutton", "onion", "tomato", "ginger", "garlic", "green peas", "spices", "butter", "pav buns"],
       cuisine: "Indian",
