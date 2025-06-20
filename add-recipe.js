@@ -1,23 +1,22 @@
 // add-recipe.js
-
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('recipeForm');
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const data = {
-      title:       form.title.value.trim(),
-      imageUrl:    form.imageUrl.value.trim(),
-      description: form.description.value.trim(),
-      author:      form.author.value.trim()
+      title: form.title.value,
+      imageUrl: form.imageUrl.value,
+      description: form.description.value,
+      author: form.author.value,
     };
 
     try {
       const res = await fetch('http://localhost:5000/api/recipes/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data),
       });
 
       if (res.ok) {

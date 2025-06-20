@@ -2,20 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Add a Recipe • SNAPDISH</title>
-  <link rel="stylesheet" href="./add-recipe.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="homepage.css" />
+  <link rel="stylesheet" href="add-recipe.css" />
 </head>
 <body>
-  <h2>Add a New Recipe</h2>
 
-  <form id="recipeForm">
-    <input  name="title"       placeholder="Recipe title"               required />
-    <input  name="imageUrl"    placeholder="Image URL (optional)"      />
-    <textarea name="description" rows="5" placeholder="Description / steps" required></textarea>
-    <input  name="author"      placeholder="Your name (publisher)"     required />
-    <button type="submit">Submit Recipe</button>
-  </form>
+  <header class="main-header">
+    <div class="header-content">
+      <h1>SNAPDISH</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="homepage.html">Home</a></li>
+          <li><a href="finder.html">Recipe Finder</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="add-recipe.html" class="active">Add Recipe</a></li>
+          <li><a href="recipes.html">All Recipes</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <script src="./add-recipe.js"></script>
+  <main class="add-recipe-container">
+    <h2>Add a New Recipe</h2>
+    <form id="recipeForm">
+      <input name="title" placeholder="Recipe title" required />
+      <input name="imageUrl" placeholder="Image URL (optional)" />
+      <textarea name="description" rows="5" placeholder="Description / steps" required></textarea>
+      <input name="author" placeholder="Your name (publisher)" required />
+      <button type="submit" class="animated-button"><i class="fas fa-plus"></i> Submit Recipe</button>
+    </form>
+  </main>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3>SNAPDISH</h3>
+        <p>Find your perfect recipe today according to your perfect mood!</p>
+      </div>
+      <!-- Footer links omitted for brevity, same as homepage -->
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 SNAPDISH. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="add-recipe.js"></script>
 </body>
 </html>
