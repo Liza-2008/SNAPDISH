@@ -1,91 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SNAPDISH - Recipe Finder</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="finder.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <title>SNAPDISH - Recipe Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="finder.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
 
-    <header>
-        <h1>SNAPDISH</h1>
-        <p>Find delicious recipes based on your ingredients</p>
-    </header>
+  <header>
+    <h1>SNAPDISH</h1>
+    <p>Find delicious recipes based on your ingredients</p>
+  </header>
 
-    <div class="search-section">
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Enter ingredients (e.g. tomato, cheese)">
-            <button id="search-button"><i class="fas fa-search"></i> Search</button>
-            <button id="clear-button"><i class="fas fa-times"></i> Clear</button>
+  <div class="search-section">
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Enter ingredients (e.g. tomato, cheese)">
+      <button id="search-button"><i class="fas fa-search"></i> Search</button>
+      <button id="clear-button"><i class="fas fa-times"></i> Clear</button>
+    </div>
+
+    <!-- Veg/Non-Veg Toggle -->
+    <div class="veg-nonveg-toggle">
+      <button class="toggle-btn active" data-filter-type="all">All</button>
+      <button class="toggle-btn" data-filter-type="vegetarian">Vegetarian</button>
+      <button class="toggle-btn" data-filter-type="non-vegetarian">Non-Vegetarian</button>
+    </div>
+  </div>
+
+  <!-- Cuisine Filters -->
+  <div class="cuisine-filters">
+    <button class="cuisine-button active" data-cuisine="all">All Cuisines</button>
+    <button class="cuisine-button" data-cuisine="indian">Indian</button>
+    <button class="cuisine-button" data-cuisine="italian">Italian</button>
+    <button class="cuisine-button" data-cuisine="american">American</button>
+  </div>
+
+  <!-- Popular Ingredient Tags -->
+  <div class="popular-tags">
+    <span>Try popular ingredients:</span>
+    <button class="tag-button" data-ingredients="cheese,tomato">Cheese & Tomato</button>
+    <button class="tag-button" data-ingredients="potato,onion">Potato & Onion</button>
+    <button class="tag-button" data-ingredients="chicken,garlic">Chicken & Garlic</button>
+    <button class="tag-button" data-ingredients="paneer,spices">Paneer & Spices</button>
+  </div>
+
+  <!-- Surprise Me Button -->
+  <div class="button-container">
+    <button id="adventurous-button">🎲 Surprise Me!</button>
+  </div>
+
+  <div id="surprise-message" class="hidden">Finding a surprise recipe for you...</div>
+
+  <div id="random-recipes-display" class="hidden">
+    <h2>Surprise Recipe</h2>
+    <div id="recipe-details"></div>
+  </div>
+
+  <!-- Suggested Recipes Section -->
+  <div class="recipe-suggestions">
+    <div class="results-header">
+      <h2>Suggested Recipes</h2>
+      <div id="results-count" class="results-count"></div>
+    </div>
+    <div id="recipe-grid" class="recipe-grid"></div>
+    <div id="loader" class="loader"></div>
+  </div>
+
+  <!-- Recipe Modal -->
+  <div id="recipe-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal">&times;</span>
+      <h2 id="recipe-modal-title">Recipe Title</h2>
+      <div class="modal-image-container">
+        <img id="recipe-modal-img" alt="Recipe Image">
+      </div>
+      <div class="modal-details">
+        <p id="recipe-modal-description"></p>
+        <div class="detail-row">
+          <span class="detail-label">Cuisine:</span>
+          <span id="recipe-modal-cuisine"></span>
         </div>
-
-        <div class="veg-nonveg-toggle">
-            <button class="toggle-btn active" data-filter-type="all">All</button>
-            <button class="toggle-btn" data-filter-type="vegetarian">Vegetarian</button>
-            <button class="toggle-btn" data-filter-type="non-vegetarian">Non-Vegetarian</button>
+        <div class="detail-row">
+          <span class="detail-label">Type:</span>
+          <span id="recipe-modal-type"></span>
         </div>
-    </div>
-
-    <div class="button-container">
-        <button id="adventurous-button">🎲 Surprise Me!</button>
-    </div>
-
-    <div id="surprise-message" class="hidden">Finding a surprise recipe for you...</div>
-
-    <div id="random-recipes-display" class="hidden">
-        <h2>Surprise Recipe</h2>
-        <div id="recipe-details"></div>
-    </div>
-
-    <div class="recipe-suggestions">
-        <div class="results-header">
-            <h2>Suggested Recipes</h2>
-            <div id="results-count" class="results-count"></div>
+        <div class="detail-row">
+          <span class="detail-label">Ingredients:</span>
+          <ul id="recipe-modal-ingredients"></ul>
         </div>
-        <div id="recipe-grid" class="recipe-grid"></div>
-        <div id="loader" class="loader"></div>
+        <button id="save-recipe" class="save-recipe"><i class="far fa-bookmark"></i> Save Recipe</button>
+      </div>
     </div>
+  </div>
 
-    <!-- Recipe Detail Modal -->
-    <div id="recipe-modal" class="modal">
-        <div class="modal-content">
-            <span id="close-modal" style="float:right; cursor:pointer;">&times;</span>
-            <h2 id="recipe-modal-title">Recipe Title</h2>
-            <div class="modal-image-container">
-                <img id="recipe-modal-img" alt="Recipe Image">
-            </div>
-            <div class="modal-details">
-                <p id="recipe-modal-description"></p>
-                <div class="detail-row">
-                    <span class="detail-label">Cuisine:</span>
-                    <span id="recipe-modal-cuisine"></span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Type:</span>
-                    <span id="recipe-modal-type"></span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-label">Ingredients:</span>
-                    <ul id="recipe-modal-ingredients"></ul>
-                </div>
-                <button id="save-recipe" class="save-recipe"><i class="far fa-bookmark"></i> Save Recipe</button>
-            </div>
-        </div>
+  <!-- Saved Recipes Modal -->
+  <div id="saved-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-saved-modal">&times;</span>
+      <h2>Saved Recipes</h2>
+      <div id="saved-recipes-grid" class="saved-recipes-grid"></div>
     </div>
+  </div>
 
-    <!-- Saved Recipes Modal -->
-    <div id="saved-modal" class="modal">
-        <div class="modal-content">
-            <span id="close-saved-modal" style="float:right; cursor:pointer;">&times;</span>
-            <h2>Saved Recipes</h2>
-            <div id="saved-recipes-grid" class="saved-recipes-grid"></div>
-        </div>
-    </div>
+  <button id="view-saved" class="floating-button"><i class="fas fa-bookmark"></i> View Saved</button>
 
-    <button id="view-saved" class="floating-button"><i class="fas fa-bookmark"></i> View Saved</button>
-
-    <script src="finder.js"></script>
+  <script src="finder.js"></script>
 </body>
 </html>
